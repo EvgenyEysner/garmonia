@@ -1,0 +1,964 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- xxx Loader Start xxx -->
+    <div id="pageloader">
+        <div class="loader-item radius-anim">
+        </div>
+    </div>
+    <!-- xxx End xxx -->
+
+    <!-- Main Header Start -->
+    <section id="home">
+        <div class="page-overlay"></div>
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <a href="#"><img src="images/logo.png" alt="Well And Spa Logo"></a>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="navbar-nav nav mx-auto text-center">
+                            <li class="nav-item">
+                                <a class="nav-link" data-scroll data-speed="2000" data-easing="easeOutQuint"
+                                   data-url="false" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
+                                                    data-easing="easeOutQuint" data-url="false" href="#welcome-wrap">About
+                                Us</a></li>
+                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
+                                                    data-easing="easeOutQuint" data-url="false" href="#services">Services</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
+                                                    data-easing="easeOutQuint" data-url="false"
+                                                    href="#gallery">Gallery</a></li>
+                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
+                                                    data-easing="easeOutQuint" data-url="false" href="#packages">Packages</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
+                                                    data-easing="easeOutQuint" data-url="false" href="#team">Team</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
+                                                    data-easing="easeOutQuint" data-url="false"
+                                                    href="#clients">Clients</a></li>
+                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
+                                                    data-easing="easeOutQuint" data-url="false" href="#blog">Blog</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
+                                                    data-easing="easeOutQuint" data-url="false"
+                                                    href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <div class="row form-wrap align-items-center">
+                <div class="col-sm-12 col-lg-7">
+                    <div class="header-form">
+                        <h1>Complete Care Under One Roof Of <span>well&amp;spa</span></h1>
+                        <div class="lead">
+                            Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue. Lorem ipsum
+                            dolor sit amet, consectetur adipiscing elit. Integer gravida velit quis dolor tristique
+                            accumsan. Pellentesque lla nec faucibus est. In in augue placerat, ligula quis, elementum
+                            augue.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-12">
+                    <div class="header-appointment">
+                        <div class="main-heading">
+                            Book An Appointment<span><i class="fa fa-leaf"></i></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 smart-mar">
+                                <div>
+                                    <div id="sucessmessage"></div>
+                                </div>
+                            </div>
+                            <form action="#" method="post" id="contact_form" novalidate="novalidate" class="col">
+                                <div class="form-row">
+                                    <input type="text" name="name" id="name" class="form-control"
+                                           placeholder="First Name">
+                                </div>
+                                <div class="form-row">
+                                    <input type="text" name="email" id="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-row mb-3">
+                                    <input type="text" name="subject" id="subject" class="form-control"
+                                           placeholder="Phone">
+                                </div>
+                                <div class="form-row">
+                                    <select title="Please choose a package" required="" name="package"
+                                            class="custom-select mb-3" aria-required="true" aria-invalid="false">
+                                        <option value="">Choose a pacakage</option>
+                                        <option value="Stone Massage">Stone Massage</option>
+                                        <option value="Luxury Facial">Luxury Facial</option>
+                                        <option value="Body Massage">Body Massage</option>
+                                        <option value="Pedicure">Pedicure</option>
+                                        <option value="Manicure">Manicure</option>
+                                        <option value="Dazzling Makeup">Dazzling Makeup</option>
+                                    </select>
+                                </div>
+                                <div class="form-row">
+                                    <button type="submit" class="form-btn">Book an Appointment</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Main Header End -->
+
+    <!-- Main Bodycontent Start -->
+    <div id="body-content">
+        <!-- Welcome Start -->
+        <section id="welcome-wrap">
+            <div class="container">
+                <div class="row align-items-lg-center align-items-md-start">
+                    <div class="col-md-12 col-lg-5 col-sm-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0">
+                        <img src="images/welcom-spa.jpg" alt="Well And Spa | Responsive HTML Template">
+                    </div>
+                    <div class="col-md-12 col-lg-7 col-sm-12 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0">
+                        <div class="welcome-text">
+                            <h1>Welcome To <span>well&amp;spa</span></h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida velit quis dolor
+                                tristique accumsan. Pellentesque elit tortor, adipiscing vel velit in, ultriciesnulla.
+                                Donec in urna sem. Nulla facilisiestibulum ut aliquet agna. </p><br>
+                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue. Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit. Integer gravida velit quis dolor tristique
+                                accumsan. Pellentesque lla nec faucibus est. In in augue placerat, ligula quis,
+                                elementum augue.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row home-services">
+                    <div class="col-md-6 col-lg-4 col-sm-12 wow fadeInUp" data-wow-duration="0" data-wow-delay="0s">
+                        <div class="media home-services-wrap">
+                            <img src="images/beauty-center.jpg" alt="" class="rounded-circle">
+                            <div class="media-body">
+                                <h3 class="mb-2">Beauty Center</h3>
+                                <div>Pellentesque lla nec faucibus est. In in augue placerat, ligula quis, elementum
+                                    augue.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12 wow fadeInUp" data-wow-duration="0" data-wow-delay="0s">
+                        <div class="media home-services-wrap">
+                            <img src="images/spa-center.jpg" alt="" class="rounded-circle">
+                            <div class="media-body">
+                                <h3 class="mb-2">Spa Canter</h3>
+                                <div>Pellentesque lla nec faucibus est. In in augue placerat, ligula quis, elementum
+                                    augue.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-sm-12 wow fadeInUp" data-wow-duration="0" data-wow-delay="0s">
+                        <div class="media home-services-wrap">
+                            <img src="images/hair-saloon.jpg" alt="" class="rounded-circle">
+                            <div class="media-body">
+                                <h3 class="mb-2">Hair Salon</h3>
+                                <div>Pellentesque lla nec faucibus est. In in augue placerat, ligula quis, elementum
+                                    augue.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Welcome End -->
+        <section id="services" class="home-pad">
+            <div class="container">
+                <div class="main-heading">
+                    Our Services<span><i class="fa fa-leaf"></i></span>
+                </div>
+                <!-- Services Start -->
+                <div class="owl-carousel wow bounceInUp" data-wow-duration="0" data-wow-delay="0" id="home-servies">
+                    <div class="item">
+                        <div class="services-wrap">
+                            <img src="images/service-1.jpg" alt="" class="rounded-circle">
+                            <h3>Stone Massage</h3>
+                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
+                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
+                                in. </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="services-wrap">
+                            <img src="images/service-2.jpg" alt="" class="rounded-circle">
+                            <h3>Luxury Facial</h3>
+                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
+                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
+                                in. </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="services-wrap">
+                            <img src="images/service-3.jpg" alt="" class="rounded-circle">
+                            <h3>Body Massage</h3>
+                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
+                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
+                                in. </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="services-wrap">
+                            <img src="images/service-4.jpg" alt="" class="rounded-circle">
+                            <h3>Pedicure</h3>
+                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
+                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
+                                in. </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="services-wrap">
+                            <img src="images/service-5.jpg" alt="" class="rounded-circle">
+                            <h3>Manicure</h3>
+                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
+                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
+                                in. </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="services-wrap">
+                            <img src="images/service-6.jpg" alt="" class="rounded-circle">
+                            <h3>Dazzling Makeup</h3>
+                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
+                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
+                                in. </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Services End -->
+            </div>
+
+            <!-- Monthly Offer Start -->
+            <div class="monthly-offer">
+                <div class="page-overlay"></div>
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-10">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 col-sm-12 text-center offer-img wow fadeInUp" data-wow-duration="0"
+                                     data-wow-delay="0s">
+                                    <img src="images/monthly-offer-img.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="col-md-8 col-sm-12 text-md-left text-center">
+                                    <h2>Monthly Offer</h2>
+                                    <h3>Hair Rebonding</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida velit
+                                        quis dolor tristiqumsan. Pellentesque elit tortor, adipiscing vel velit in,
+                                        ultricies fermentum nulla. Donec in urna sem. Nulla facilisi.</p><br>
+                                    <a href="#" class="btn btn-outline-light btn-lg">Only -$999 </a>
+                                </div>
+                                <!--Signup Form -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Monthly Offer End -->
+
+            <!-- Features Start -->
+            <div class="features-wrap">
+                <div class="main-heading">
+                    Few Awesome Benefits
+                    <span><i class="fa fa-leaf"></i></span>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 col-sm-6 wow fadeInLeft" data-wow-duration="0" data-wow-delay="0s">
+                            <h3>Find Your Soul Here</h3>
+                            <p>Stet clita kasd gubergren, no sea takimata sanctus. At vero eos et accusam et justo duo
+                                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata.Stet clita kasd
+                                gubergren, no sea takimata sanctus. At vero eos et accusam et justo duo dolores et ea
+                                rebum.</p><br>
+                        </div>
+                        <div class="col-lg-7 col-sm-6 wow fadeInRight" data-wow-duration="0" data-wow-delay="0.2s">
+                            <h3>Other Amenities</h3>
+                            <ul class="fa-ul amenities">
+                                <li><span class="fa-li"><i class="fas fa-utensils"></i></span>Lorem ipsum dolor sit amet
+                                </li>
+                                <li><span class="fa-li"><i class="fas fa-heartbeat"></i></span>Suspendisse tristique
+                                    velit vel ligula
+                                </li>
+                                <li><span class="fa-li"><i class="fas fa-beer"></i></span>Curabitur tincidunt iaculis
+                                    est posuere
+                                </li>
+                                <li><span class="fa-li"><i class="fas fa-car"></i></span>Vestibulum vitae nibh elit
+                                    phasellus sed
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Features End -->
+        </section>
+
+        <!-- Gallery Start -->
+        <section id="gallery" class="home-pad">
+            <div class="main-heading">
+                Our Gallery
+                <span><i class="fa fa-leaf"></i></span>
+            </div>
+
+            <div id="js-filters-mosaic-flat" class="cbp-l-filters-buttonCenter">
+                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
+                    All
+                    <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".print" class="cbp-filter-item">
+                    Massage
+                    <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".web-design" class="cbp-filter-item">
+                    Hair Styling
+                    <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".graphic" class="cbp-filter-item">
+                    Beauty
+                    <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".motion" class="cbp-filter-item">
+                    Spa
+                    <div class="cbp-filter-counter"></div>
+                </div>
+            </div>
+
+            <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat wow fadeIn" data-wow-duration="0"
+                 data-wow-delay="0">
+                <div class="cbp-item web-design graphic">
+                    <a href="images/gallery/img-1.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/gallery/img-1.jpg" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Gallery Title</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item print motion">
+                    <a href="images/gallery/img-2.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/gallery/img-2.jpg" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Gallery Title</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item print motion">
+                    <a href="images/gallery/img-3.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/gallery/img-3.jpg" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Gallery Title</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item motion graphic">
+                    <a href="images/gallery/img-4.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/gallery/img-4.jpg" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Gallery Title</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item web-design print">
+                    <a href="images/gallery/img-5.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/gallery/img-5.jpg" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Gallery Title</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item print motion">
+                    <a href="images/gallery/img-6.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/gallery/img-6.jpg" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Gallery Title</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item web-design print">
+                    <a href="images/gallery/img-7.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/gallery/img-7.jpg" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Gallery Title</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item print graphic">
+                    <a href="images/gallery/img-8.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/gallery/img-8.jpg" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Gallery Title</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="js-loadMore-mosaic-flat" class="cbp-l-loadMore-bgbutton">
+                <a href="gallery/loadMore.html" class="cbp-l-loadMore-link" rel="nofollow">
+                    <span class="cbp-l-loadMore-defaultText">LOAD MORE</span>
+                    <span class="cbp-l-loadMore-loadingText">LOADING...</span>
+                    <span class="cbp-l-loadMore-noMoreLoading">No More Images</span>
+                </a>
+            </div>
+        </section>
+        <!-- Gallery End -->
+
+        <!-- Hot Package Start -->
+        <section id="packages" class="home-pad">
+            <div class="main-heading">
+                Hot Selling Packages
+                <span><i class="fa fa-leaf"></i></span>
+            </div>
+
+            <div class="container">
+                <div class="owl-carousel wow fadeInUp" data-wow-duration="0" data-wow-delay="0" id="home-package">
+                    <div class="item">
+                        <div class="package-wrap">
+                            <div class="package-price rounded-circle">
+                                299<span><i class="fas fa-dollar-sign"></i></span>
+                            </div>
+                            <h4>Stone Massage</h4>
+                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue.</p>
+                            <a data-scroll data-speed="2000" data-easing="easeOutQuint" data-url="false" href="#contact"
+                               class="btn btn-light">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="package-wrap">
+                            <div class="package-price rounded-circle">
+                                299<span><i class="fas fa-dollar-sign"></i></span>
+                            </div>
+                            <h4>Luxury Facial</h4>
+                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue.</p>
+                            <a data-scroll data-speed="2000" data-easing="easeOutQuint" data-url="false" href="#contact"
+                               class="btn btn-light">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="package-wrap">
+                            <div class="package-price rounded-circle">
+                                299<span><i class="fas fa-dollar-sign"></i></span>
+                            </div>
+                            <h4>Body Massage</h4>
+                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue.</p>
+                            <a data-scroll data-speed="2000" data-easing="easeOutQuint" data-url="false" href="#contact"
+                               class="btn btn-light">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="package-wrap">
+                            <div class="package-price rounded-circle">
+                                299<span><i class="fas fa-dollar-sign"></i></span>
+                            </div>
+                            <h4>Pedicure</h4>
+                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue.</p>
+                            <a data-scroll data-speed="2000" data-easing="easeOutQuint" data-url="false" href="#contact"
+                               class="btn btn-light">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="package-wrap">
+                            <div class="package-price rounded-circle">
+                                299<span><i class="fas fa-dollar-sign"></i></span>
+                            </div>
+                            <h4>Manicure</h4>
+                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue.</p>
+                            <a data-scroll data-speed="2000" data-easing="easeOutQuint" data-url="false" href="#contact"
+                               class="btn btn-light">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="package-wrap">
+                            <div class="package-price rounded-circle">
+                                299<span><i class="fas fa-dollar-sign"></i></span>
+                            </div>
+                            <h4>Dazzling Makeup</h4>
+                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue.</p>
+                            <a data-scroll data-speed="2000" data-easing="easeOutQuint" data-url="false" href="#contact"
+                               class="btn btn-light">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hot Package Start -->
+
+        <!-- Our Team Start -->
+        <section id="team" class="home-pad">
+            <div class="main-heading">
+                Our Team Members
+                <span><i class="fa fa-leaf"></i></span>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 col-sm-6 wow flipInX" data-wow-duration="0" data-wow-delay="0s">
+                        <div class="team-wrap">
+                            <figure class="snip1210">
+                                <img src="images/team/team-2.jpg" alt=""/>
+                                <figcaption>
+                                    <a href="#"><span><i class="fab fa-twitter"></i></span></a>
+                                    <a href="#"><span><i class="fab fa-facebook"></i></span></a>
+                                    <a href="#"><span><i class="fab fa-google-plus"></i></span></a>
+                                </figcaption>
+                            </figure>
+                            <div class="text">
+                                <h3>John Morise</h3>
+                                <h5>Founder</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6 wow flipInX" data-wow-duration="0.3" data-wow-delay="0.2s">
+                        <div class="team-wrap">
+                            <figure class="snip1210">
+                                <img src="images/team/team-1.jpg" alt=""/>
+                                <figcaption>
+                                    <a href="#"><span><i class="fab fa-twitter"></i></span></a>
+                                    <a href="#"><span><i class="fab fa-facebook"></i></span></a>
+                                    <a href="#"><span><i class="fab fa-google-plus"></i></span></a>
+                                </figcaption>
+                            </figure>
+                            <div class="text">
+                                <h3>Kevin Mash</h3>
+                                <h5>Developer</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6 wow flipInX" data-wow-duration="0.6" data-wow-delay="0.4s">
+                        <div class="team-wrap">
+                            <figure class="snip1210">
+                                <img src="images/team/team-4.jpg" alt=""/>
+                                <figcaption>
+                                    <a href="#"><span><i class="fab fa-twitter"></i></span></a>
+                                    <a href="#"><span><i class="fab fa-facebook"></i></span></a>
+                                    <a href="#"><span><i class="fab fa-google-plus"></i></span></a>
+                                </figcaption>
+                            </figure>
+                            <div class="text">
+                                <h3>Mike Douglos</h3>
+                                <h5>Designer</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6 wow flipInX" data-wow-duration="0.9" data-wow-delay="0.6s">
+                        <div class="team-wrap">
+                            <figure class="snip1210">
+                                <img src="images/team/team-3.jpg" alt=""/>
+                                <figcaption>
+                                    <a href="#"><span><i class="fab fa-twitter"></i></span></a>
+                                    <a href="#"><span><i class="fab fa-facebook"></i></span></a>
+                                    <a href="#"><span><i class="fab fa-google-plus"></i></span></a>
+                                </figcaption>
+                            </figure>
+                            <div class="text">
+                                <h3>Kelly Doe</h3>
+                                <h5>Support</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Team End -->
+
+        <!-- Our Client Start -->
+        <section id="clients" class="home-pad">
+            <div class="main-heading">
+                Client's Testimonials
+                <span><i class="fa fa-leaf"></i></span>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 col-sm-12 wow fadeInDown" data-wow-duration="0"
+                         data-wow-delay="0.1s">
+                        <div class="owl-carousel" id="home-testimonial">
+                            <div class="item">
+                                <div class="testimonial-wrap">
+                                    <img src="images/team/testimonial-1.jpg" class="rounded-circle" alt="">
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                        Consonantia, there live the blind texts. Aliquam gravida, urna quis ornare
+                                        imperdiet, urna lacus egestas massa. </p>
+                                    <h3>- John Gerry <span>Design Hunt</span></h3>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-wrap">
+                                    <img src="images/team/testimonial-2.jpg" class="rounded-circle" alt="">
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                        Consonantia, there live the blind texts. Aliquam gravida, urna quis ornare
+                                        imperdiet, urna lacus egestas massa. </p>
+                                    <h3>- John Gerry <span>Design Hunt</span></h3>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-wrap">
+                                    <img src="images/team/testimonial-3.jpg" class="rounded-circle" alt="">
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                        Consonantia, there live the blind texts. Aliquam gravida, urna quis ornare
+                                        imperdiet, urna lacus egestas massa. </p>
+                                    <h3>- John Gerry <span>Design Hunt</span></h3>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="owl-carousel wow bounceInUp" data-wow-duration="0" data-wow-delay="0.2s"
+                         id="home-clients">
+                        <div class="item">
+                            <div class="client-wrap">
+                                <img src="images/clients/client1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="client-wrap">
+                                <img src="images/clients/client2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="client-wrap">
+                                <img src="images/clients/client3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="client-wrap">
+                                <img src="images/clients/client4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="client-wrap">
+                                <img src="images/clients/client5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="client-wrap">
+                                <img src="images/clients/client6.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="client-wrap">
+                                <img src="images/clients/client1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="client-wrap">
+                                <img src="images/clients/client2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offers-wrap">
+                <div class="container">
+                    <div class="main-heading">
+                        Amazing Offers
+                        <span><i class="fa fa-leaf"></i></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2 col-sm-12 wow fadeInUp" data-wow-duration="0"
+                             data-wow-delay="0">
+                            <h4 class="text-center">Subscribe to our newsletter for special offers</h4>
+                            <div class="row d-flex align-items-center justify-content-md-center">
+                                <div class="col-md-auto">
+                                    <div class="offer-icon rounded-circle">
+                                        <i class="fa fa-gift"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-auto">
+
+                                    <form class="form-inline">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Email Address">
+                                            <div class="input-group-append">
+                                                <button type="submit" id="subscribe-submit"
+                                                        class="col-xs-push-5 btn btn-default">Subscribe
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Client End -->
+
+        <!-- Recent Blog Start -->
+        <section id="blog" class="home-pad">
+            <div class="main-heading">
+                Recent Blog
+                <span><i class="fa fa-leaf"></i></span>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 col-sm-6">
+                        <div class="blog-wrap">
+                            <div class="blog-wrap-img rounded-circle">
+                                <img src="images/blog/blog-1.jpg" class="" alt="">
+                            </div>
+                            <div class="meta-text"><i class="far fa-clock"></i> 04.10.2013 <span>/</span> <a href="#"><i
+                                    class="fas fa-tag"></i> Design</a> <span>/</span>
+                                <a href="#"><i class="far fa-comment"></i> 2</a></div>
+                            <h4><a href="blog-single.html">Our Spa</a></h4>
+                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue.</p>
+                            <a href="blog-single.html" class="btn btn-outline-secondary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6">
+                        <div class="blog-wrap">
+                            <div class="blog-wrap-img rounded-circle">
+                                <img src="images/blog/blog-2.jpg" class="" alt="">
+                            </div>
+                            <div class="meta-text"><i class="far fa-clock"></i> 04.10.2013 <span>/</span> <a href="#"><i
+                                    class="fas fa-tag"></i> Design</a> <span>/</span>
+                                <a href="#"><i class="far fa-comment"></i> 2</a></div>
+                            <h4><a href="blog-single.html">At Beach After Spa</a></h4>
+                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue.</p>
+                            <a href="blog-single.html" class="btn btn-outline-secondary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6">
+                        <div class="blog-wrap">
+                            <div class="blog-wrap-img rounded-circle">
+                                <img src="images/blog/blog-3.jpg" class="" alt="">
+                            </div>
+                            <div class="meta-text"><i class="far fa-clock"></i> 04.10.2013 <span>/</span> <a href="#"><i
+                                    class="fas fa-tag"></i> Design</a> <span>/</span>
+                                <a href="#"><i class="far fa-comment"></i> 2</a></div>
+                            <h4><a href="blog-single.html">Additional Services</a></h4>
+                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue.</p>
+                            <a href="blog-single.html" class="btn btn-outline-secondary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6">
+                        <div class="blog-wrap">
+                            <div class="blog-wrap-img rounded-circle">
+                                <img src="images/blog/blog-4.jpg" class="" alt="">
+                            </div>
+                            <div class="meta-text"><i class="far fa-clock"></i> 04.10.2013 <span>/</span> <a href="#"><i
+                                    class="fas fa-tag"></i> Design</a> <span>/</span>
+                                <a href="#"><i class="far fa-comment"></i> 2</a></div>
+                            <h4><a href="blog-single.html">Certified Products</a></h4>
+                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue.</p>
+                            <a href="blog-single.html" class="btn btn-outline-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- Recent Blog End -->
+
+        <!-- Contact Start -->
+        <section id="contact" class="home-pad">
+            <div class="main-heading">
+                Contact Us
+                <span><i class="fa fa-leaf"></i></span>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 col-sm-6 wow fadeInLeft" data-wow-duration="1" data-wow-delay="0">
+                        <div class="contact-wrap">
+                            <div class="contact-icon rounded-circle">
+                                <i class="fa fa-map-signs"></i>
+                            </div>
+                            <h3>Our Location</h3>
+                            <div>Envato Pty Ltd, 13/2 Elizabeth St <br>Melbourne VIC 3000, Australia</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6 wow fadeInLeft" data-wow-duration="1" data-wow-delay="0.2s">
+                        <div class="contact-wrap">
+                            <div class="contact-icon rounded-circle">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <h3>Phone Number</h3>
+                            <div>Phone: +88 (0) 101 0000 000 <br>Fax: +88 (0) 202 0000 001</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6 wow fadeInLeft" data-wow-duration="1" data-wow-delay="0.4s">
+                        <div class="contact-wrap">
+                            <div class="contact-icon rounded-circle">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <div><a href="#">info@wll&amp;spa.com</a><br> <a href="#">support@wll&amp;spa.com</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6 wow fadeInLeft" data-wow-duration="1" data-wow-delay="0.6s">
+                        <div class="contact-wrap">
+                            <div class="contact-icon rounded-circle">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <h3>Business Hours</h3>
+                            <div>9 am to 6 pm on Weekdays <br>7 am to 9 pm on Weekends</div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <section class="hs-recent-posts">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5 left-content">
+                                        <div class="bg-left">
+                                            <div id="map-holder">
+                                                <div id="map_extended">
+                                                    <p>This will be replaced with the Google Map.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-7 right-content">
+                                        <div class="col-sm-12 col-md-12">
+                                            <div class="row hs-content">
+                                                <div class="col-sm-12 smart-mar">
+                                                    <div>
+                                                        <div id="sucessmessage"></div>
+                                                    </div>
+                                                </div>
+                                                <form action="#" method="post" id="contact_form" novalidate="novalidate"
+                                                      class="col-md-12">
+                                                    <div class="form-row">
+                                                        <div class="col">
+                                                            <input type="text" name="name" id="name"
+                                                                   class="form-control" placeholder="First Name">
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="text" name="lastname" id="lastname"
+                                                                   class="form-control" placeholder="Last Name">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-row">
+                                                        <div class="col">
+                                                            <input type="text" name="email" id="email"
+                                                                   class="form-control" placeholder="Email">
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="text" name="subject" id="subject"
+                                                                   class="form-control" placeholder="Subject">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="col">
+                                                            <textarea name="comment" id="comment" class="form-control"
+                                                                      rows="8" placeholder="Message"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="col">
+                                                            <button type="submit" class="form-btn">Contact Us</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- / .row -->
+                            </div>
+                            <!-- /.container -->
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact End -->
+
+
+    </div>
+    <!-- Main Bodycontent End -->
+
+    <section class="copyright home-pad">
+        <div class="container">
+            <div class="row text-md-left">
+                <div class="col-sm-12 col-md-4">
+                    <a href="http://mannatstudio.com/" target="_blank"> Well&amp;Spa</a> © 2017. All Rights Reserved.
+                </div>
+                <div class="col-sm-12 col-md-8 text-md-right">
+                    Landing Page Template Designed &amp; Developed By: <a href="http://mannatstudio.com/"
+                                                                          target="_blank">Mannat Studio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- xxx Back To Top xxx -->
+    <div id="back-top">
+        <a class="rounded-circle" href="#top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+    <!-- xxx End xxx -->
+{% endblock content %}
