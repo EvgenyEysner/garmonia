@@ -1,12 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-    <!-- xxx Loader Start xxx -->
+    <!--  Loader Start  -->
     <div id="pageloader">
         <div class="loader-item radius-anim">
         </div>
     </div>
-    <!-- xxx End xxx -->
+    <!--  End  -->
 
     <!-- Main Header Start -->
     <section id="home">
@@ -14,7 +15,7 @@
         <div class="container">
             <header>
                 <div class="logo">
-                    <a href="#"><img src="images/logo.png" alt="Well And Spa Logo"></a>
+{#                    <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="Well And Spa Logo"></a>#}
                 </div>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
@@ -26,7 +27,7 @@
                         <ul class="navbar-nav nav mx-auto text-center">
                             <li class="nav-item">
                                 <a class="nav-link" data-scroll data-speed="2000" data-easing="easeOutQuint"
-                                   data-url="false" href="#home">Home</a>
+                                   data-url="false" href="{% url 'home' %}">Home</a>
                             </li>
                             <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
                                                     data-easing="easeOutQuint" data-url="false" href="#welcome-wrap">About
@@ -123,7 +124,7 @@
             <div class="container">
                 <div class="row align-items-lg-center align-items-md-start">
                     <div class="col-md-12 col-lg-5 col-sm-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0">
-                        <img src="images/welcom-spa.jpg" alt="Well And Spa | Responsive HTML Template">
+                        <img src="{% static 'images/welcom-spa.png' %}" alt="Well And Spa | Responsive HTML Template">
                     </div>
                     <div class="col-md-12 col-lg-7 col-sm-12 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0">
                         <div class="welcome-text">
@@ -954,11 +955,11 @@
         </div>
     </section>
 
-    <!-- xxx Back To Top xxx -->
+    <!--  Back To Top  -->
     <div id="back-top">
         <a class="rounded-circle" href="#top">
             <i class="fa fa-angle-up"></i>
         </a>
     </div>
-    <!-- xxx End xxx -->
+    <!--  End  -->
 {% endblock content %}
