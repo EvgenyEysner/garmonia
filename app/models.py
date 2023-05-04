@@ -26,4 +26,29 @@ class Treatment(models.Model):
         verbose_name_plural = "Behandlungen"
 
     def __str__(self):
-        return self.category.__str__()
+        return self.name
+
+
+class MonthlyOffer(models.Model):
+    treatment = models.ForeignKey(
+        Treatment,
+        on_delete=models.CASCADE,
+        verbose_name="Monatliches Angebot",
+    )
+    title = models.CharField("Angebotsbezeichnung", max_length=128)
+    description = models.TextField("Angebotsbeschreibung")
+    image = models.ImageField(verbose_name="Angebotsbild", upload_to="media")
+    active = models.BooleanField("Angebot aktiv?", default="False")
+    price = models.DecimalField("Preise", max_digits=10, decimal_places=2, null=True)
+
+    class Meta:
+        ordering = ["title"]
+        verbose_name = "Angebot"
+        verbose_name_plural = "Angebote"
+
+    def __str__(self):
+        return self.title
+
+
+class Gallery(models.Model):
+    pass

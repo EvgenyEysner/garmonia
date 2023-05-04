@@ -1,0 +1,24 @@
+<div class="monthly-offer">
+    <div class="page-overlay"></div>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-10">
+                {% for offer in offers %}
+                <div class="row align-items-center">
+                    <div class="col-md-4 col-sm-12 text-center offer-img wow fadeInUp" data-wow-duration="0"
+                         data-wow-delay="0s">
+                        <img src="{{ offer.image.url }}" alt="" class="rounded-circle">
+                    </div>
+                    <div class="col-md-8 col-sm-12 text-md-left text-center">
+                        <h2>{{ offer.title }}</h2>
+                        <h3>{{ offer.treatment }}</h3>
+                        <p>{{ offer.description }}</p><br>
+                        <a href="#appointment" class="btn btn-outline-light btn-lg">{{ offer.price }} €</a>
+                    </div>
+                    <!--Signup Form -->
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

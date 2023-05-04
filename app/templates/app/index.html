@@ -28,7 +28,7 @@
                 <div class="owl-carousel wow bounceInUp" data-wow-duration="0" data-wow-delay="0" id="home-servies">
                     <div class="item">
                         <div class="services-wrap">
-                            <img src="images/service-1.jpg" alt="" class="rounded-circle">
+                            <img src="{% static 'images/service-1.png' %}" alt="" class="rounded-circle">
                             <h3>Kosmetische Behandlungen</h3>
                             <p>Gesichtsbehandlungen gehören zu den gefragtesten Verfahren, da sie helfen können, Falten
                                 zu reduzieren und den Hautton zu verbessern. </p>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="item">
                         <div class="services-wrap">
-                            <img src="images/service-2.jpg" alt="" class="rounded-circle">
+                            <img src="{% static 'images/service-2.png' %}" alt="" class="rounded-circle">
                             <h3>Permanent Make Up</h3>
                             <p>Permanent Make-up ist ein revolutionäres kosmetisches Verfahren, das Ihre
                                 natürliche Schönheit mit dauerhaften Ergebnissen verbessern kann. </p>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="item">
                         <div class="services-wrap">
-                            <img src="images/service-3.jpg" alt="" class="rounded-circle">
+                            <img src="{% static 'images/service-3.png' %}" alt="" class="rounded-circle">
                             <h3>Körperenthaarung</h3>
                             <p>Die Körperenthaarung kann schnell und effizient mit
                                 minimalen Beschwerden durchgeführt werden. Dabei stehen verschiedene Methoden zur
@@ -53,7 +53,7 @@
                     </div>
                     <div class="item">
                         <div class="services-wrap">
-                            <img src="images/service-4.jpg" alt="" class="rounded-circle">
+                            <img src="{% static 'images/service-4.png' %}" alt="" class="rounded-circle">
                             <h3>Fußpflege</h3>
                             <p>Pediküre ist eine großartige Möglichkeit, Ihre Füße zu verwöhnen,
                                 dass sie gesund aussehen und sich so anfühlen. Mit regelmäßiger Pediküre halten Sie
@@ -62,7 +62,7 @@
                     </div>
                     <div class="item">
                         <div class="services-wrap">
-                            <img src="images/service-5.jpg" alt="" class="rounded-circle">
+                            <img src="{% static 'images/service-5.png' %}" alt="" class="rounded-circle">
                             <h3>Nageldesign</h3>
                             <p>Sie wünschen längere Nägeln, ist die Modellage die beste Lösung.
                                 Die vorhandene Länge ist dabei unentscheidend.
@@ -74,68 +74,45 @@
             </div>
 
             <!-- Monthly Offer Start -->
-            <div class="monthly-offer">
-                <div class="page-overlay"></div>
-                <div class="container">
-                    <div class="row justify-content-md-center">
-                        <div class="col-md-10">
-                            <div class="row align-items-center">
-                                <div class="col-md-4 col-sm-12 text-center offer-img wow fadeInUp" data-wow-duration="0"
-                                     data-wow-delay="0s">
-                                    <img src="images/monthly-offer-img.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="col-md-8 col-sm-12 text-md-left text-center">
-                                    <h2>Monthly Offer</h2>
-                                    <h3>Hair Rebonding</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida velit
-                                        quis dolor tristiqumsan. Pellentesque elit tortor, adipiscing vel velit in,
-                                        ultricies fermentum nulla. Donec in urna sem. Nulla facilisi.</p><br>
-                                    <a href="#" class="btn btn-outline-light btn-lg">Only -$999 </a>
-                                </div>
-                                <!--Signup Form -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% include "snippets/monthly-offer.html" %}
             <!-- Monthly Offer End -->
 
             <!-- Features Start -->
-            <div class="features-wrap">
-                <div class="main-heading">
-                    Few Awesome Benefits
-                    <span><i class="fa fa-leaf"></i></span>
-                </div>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-7 col-sm-6 wow fadeInLeft" data-wow-duration="0" data-wow-delay="0s">
-                            <h3>Find Your Soul Here</h3>
-                            <p>Stet clita kasd gubergren, no sea takimata sanctus. At vero eos et accusam et justo duo
-                                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata.Stet clita kasd
-                                gubergren, no sea takimata sanctus. At vero eos et accusam et justo duo dolores et ea
-                                rebum.</p><br>
-                        </div>
-                        <div class="col-lg-7 col-sm-6 wow fadeInRight" data-wow-duration="0" data-wow-delay="0.2s">
-                            <h3>Other Amenities</h3>
-                            <ul class="fa-ul amenities">
-                                <li><span class="fa-li"><i class="fas fa-utensils"></i></span>Lorem ipsum dolor sit amet
-                                </li>
-                                <li><span class="fa-li"><i class="fas fa-heartbeat"></i></span>Suspendisse tristique
-                                    velit vel ligula
-                                </li>
-                                <li><span class="fa-li"><i class="fas fa-beer"></i></span>Curabitur tincidunt iaculis
-                                    est posuere
-                                </li>
-                                <li><span class="fa-li"><i class="fas fa-car"></i></span>Vestibulum vitae nibh elit
-                                    phasellus sed
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            {#            <div class="features-wrap">#}
+            {#                <div class="main-heading">#}
+            {#                    Few Awesome Benefits#}
+            {#                    <span><i class="fa fa-leaf"></i></span>#}
+            {#                </div>#}
+            {##}
+            {#                <div class="container">#}
+            {#                    <div class="row">#}
+            {#                        <div class="col-lg-7 col-sm-6 wow fadeInLeft" data-wow-duration="0" data-wow-delay="0s">#}
+            {#                            <h3>Find Your Soul Here</h3>#}
+            {#                            <p>Stet clita kasd gubergren, no sea takimata sanctus. At vero eos et accusam et justo duo#}
+            {#                                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata.Stet clita kasd#}
+            {#                                gubergren, no sea takimata sanctus. At vero eos et accusam et justo duo dolores et ea#}
+            {#                                rebum.</p><br>#}
+            {#                        </div>#}
+            {#                        <div class="col-lg-7 col-sm-6 wow fadeInRight" data-wow-duration="0" data-wow-delay="0.2s">#}
+            {#                            <h3>Other Amenities</h3>#}
+            {#                            <ul class="fa-ul amenities">#}
+            {#                                <li><span class="fa-li"><i class="fas fa-utensils"></i></span>Lorem ipsum dolor sit amet#}
+            {#                                </li>#}
+            {#                                <li><span class="fa-li"><i class="fas fa-heartbeat"></i></span>Suspendisse tristique#}
+            {#                                    velit vel ligula#}
+            {#                                </li>#}
+            {#                                <li><span class="fa-li"><i class="fas fa-beer"></i></span>Curabitur tincidunt iaculis#}
+            {#                                    est posuere#}
+            {#                                </li>#}
+            {#                                <li><span class="fa-li"><i class="fas fa-car"></i></span>Vestibulum vitae nibh elit#}
+            {#                                    phasellus sed#}
+            {#                                </li>#}
+            {#                            </ul>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {##}
+            {#            </div>#}
             <!-- Features End -->
         </section>
 
@@ -393,41 +370,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="offers-wrap">
-                <div class="container">
-                    <div class="main-heading">
-                        Amazing Offers
-                        <span><i class="fa fa-leaf"></i></span>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 offset-md-2 col-sm-12 wow fadeInUp" data-wow-duration="0"
-                             data-wow-delay="0">
-                            <h4 class="text-center">Subscribe to our newsletter for special offers</h4>
-                            <div class="row d-flex align-items-center justify-content-md-center">
-                                <div class="col-md-auto">
-                                    <div class="offer-icon rounded-circle">
-                                        <i class="fa fa-gift"></i>
-                                    </div>
-                                </div>
-                                <div class="col-md-auto">
-
-                                    <form class="form-inline">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Email Address">
-                                            <div class="input-group-append">
-                                                <button type="submit" id="subscribe-submit"
-                                                        class="col-xs-push-5 btn btn-default">Subscribe
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% include "snippets/pricelist.html" %}
         </section>
         <!-- Our Client End -->
 
