@@ -10,233 +10,63 @@
     <!--  End  -->
 
     <!-- Main Header Start -->
-    <section id="home">
-        <div class="page-overlay"></div>
-        <div class="container">
-            <header>
-                <div class="logo">
-{#                    <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="Well And Spa Logo"></a>#}
-                </div>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
-                            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbar">
-                        <ul class="navbar-nav nav mx-auto text-center">
-                            <li class="nav-item">
-                                <a class="nav-link" data-scroll data-speed="2000" data-easing="easeOutQuint"
-                                   data-url="false" href="{% url 'home' %}">Home</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
-                                                    data-easing="easeOutQuint" data-url="false" href="#welcome-wrap">About
-                                Us</a></li>
-                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
-                                                    data-easing="easeOutQuint" data-url="false" href="#services">Services</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
-                                                    data-easing="easeOutQuint" data-url="false"
-                                                    href="#gallery">Gallery</a></li>
-                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
-                                                    data-easing="easeOutQuint" data-url="false" href="#packages">Packages</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
-                                                    data-easing="easeOutQuint" data-url="false" href="#team">Team</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
-                                                    data-easing="easeOutQuint" data-url="false"
-                                                    href="#clients">Clients</a></li>
-                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
-                                                    data-easing="easeOutQuint" data-url="false" href="#blog">Blog</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
-                                                    data-easing="easeOutQuint" data-url="false"
-                                                    href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-            <div class="row form-wrap align-items-center">
-                <div class="col-sm-12 col-lg-7">
-                    <div class="header-form">
-                        <h1>Complete Care Under One Roof Of <span>well&amp;spa</span></h1>
-                        <div class="lead">
-                            Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit. Integer gravida velit quis dolor tristique
-                            accumsan. Pellentesque lla nec faucibus est. In in augue placerat, ligula quis, elementum
-                            augue.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-sm-12">
-                    <div class="header-appointment">
-                        <div class="main-heading">
-                            Book An Appointment<span><i class="fa fa-leaf"></i></span>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12 smart-mar">
-                                <div>
-                                    <div id="sucessmessage"></div>
-                                </div>
-                            </div>
-                            <form action="#" method="post" id="contact_form" novalidate="novalidate" class="col">
-                                <div class="form-row">
-                                    <input type="text" name="name" id="name" class="form-control"
-                                           placeholder="First Name">
-                                </div>
-                                <div class="form-row">
-                                    <input type="text" name="email" id="email" class="form-control" placeholder="Email">
-                                </div>
-                                <div class="form-row mb-3">
-                                    <input type="text" name="subject" id="subject" class="form-control"
-                                           placeholder="Phone">
-                                </div>
-                                <div class="form-row">
-                                    <select title="Please choose a package" required="" name="package"
-                                            class="custom-select mb-3" aria-required="true" aria-invalid="false">
-                                        <option value="">Choose a pacakage</option>
-                                        <option value="Stone Massage">Stone Massage</option>
-                                        <option value="Luxury Facial">Luxury Facial</option>
-                                        <option value="Body Massage">Body Massage</option>
-                                        <option value="Pedicure">Pedicure</option>
-                                        <option value="Manicure">Manicure</option>
-                                        <option value="Dazzling Makeup">Dazzling Makeup</option>
-                                    </select>
-                                </div>
-                                <div class="form-row">
-                                    <button type="submit" class="form-btn">Book an Appointment</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </section>
+    {% include "snippets/header.html" %}
     <!-- Main Header End -->
 
     <!-- Main Bodycontent Start -->
     <div id="body-content">
         <!-- Welcome Start -->
-        <section id="welcome-wrap">
-            <div class="container">
-                <div class="row align-items-lg-center align-items-md-start">
-                    <div class="col-md-12 col-lg-5 col-sm-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0">
-                        <img src="{% static 'images/welcom-spa.png' %}" alt="Well And Spa | Responsive HTML Template">
-                    </div>
-                    <div class="col-md-12 col-lg-7 col-sm-12 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0">
-                        <div class="welcome-text">
-                            <h1>Welcome To <span>well&amp;spa</span></h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida velit quis dolor
-                                tristique accumsan. Pellentesque elit tortor, adipiscing vel velit in, ultriciesnulla.
-                                Donec in urna sem. Nulla facilisiestibulum ut aliquet agna. </p><br>
-                            <p>Nulla nec faucibus est. In in augue placerat, ligula quis, elementum augue. Lorem ipsum
-                                dolor sit amet, consectetur adipiscing elit. Integer gravida velit quis dolor tristique
-                                accumsan. Pellentesque lla nec faucibus est. In in augue placerat, ligula quis,
-                                elementum augue.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row home-services">
-                    <div class="col-md-6 col-lg-4 col-sm-12 wow fadeInUp" data-wow-duration="0" data-wow-delay="0s">
-                        <div class="media home-services-wrap">
-                            <img src="images/beauty-center.jpg" alt="" class="rounded-circle">
-                            <div class="media-body">
-                                <h3 class="mb-2">Beauty Center</h3>
-                                <div>Pellentesque lla nec faucibus est. In in augue placerat, ligula quis, elementum
-                                    augue.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-sm-12 wow fadeInUp" data-wow-duration="0" data-wow-delay="0s">
-                        <div class="media home-services-wrap">
-                            <img src="images/spa-center.jpg" alt="" class="rounded-circle">
-                            <div class="media-body">
-                                <h3 class="mb-2">Spa Canter</h3>
-                                <div>Pellentesque lla nec faucibus est. In in augue placerat, ligula quis, elementum
-                                    augue.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-4 col-sm-12 wow fadeInUp" data-wow-duration="0" data-wow-delay="0s">
-                        <div class="media home-services-wrap">
-                            <img src="images/hair-saloon.jpg" alt="" class="rounded-circle">
-                            <div class="media-body">
-                                <h3 class="mb-2">Hair Salon</h3>
-                                <div>Pellentesque lla nec faucibus est. In in augue placerat, ligula quis, elementum
-                                    augue.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {% include "snippets/welcome.html" %}
         <!-- Welcome End -->
+
         <section id="services" class="home-pad">
             <div class="container">
                 <div class="main-heading">
-                    Our Services<span><i class="fa fa-leaf"></i></span>
+                    Unsere Leistungen<span><i class="fa fa-leaf"></i></span>
                 </div>
                 <!-- Services Start -->
                 <div class="owl-carousel wow bounceInUp" data-wow-duration="0" data-wow-delay="0" id="home-servies">
                     <div class="item">
                         <div class="services-wrap">
                             <img src="images/service-1.jpg" alt="" class="rounded-circle">
-                            <h3>Stone Massage</h3>
-                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
-                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
-                                in. </p>
+                            <h3>Kosmetische Behandlungen</h3>
+                            <p>Gesichtsbehandlungen gehören zu den gefragtesten Verfahren, da sie helfen können, Falten
+                                zu reduzieren und den Hautton zu verbessern. </p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="services-wrap">
                             <img src="images/service-2.jpg" alt="" class="rounded-circle">
-                            <h3>Luxury Facial</h3>
-                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
-                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
-                                in. </p>
+                            <h3>Permanent Make Up</h3>
+                            <p>Permanent Make-up ist ein revolutionäres kosmetisches Verfahren, das Ihre
+                                natürliche Schönheit mit dauerhaften Ergebnissen verbessern kann. </p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="services-wrap">
                             <img src="images/service-3.jpg" alt="" class="rounded-circle">
-                            <h3>Body Massage</h3>
-                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
-                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
-                                in. </p>
+                            <h3>Körperenthaarung</h3>
+                            <p>Die Körperenthaarung kann schnell und effizient mit
+                                minimalen Beschwerden durchgeführt werden. Dabei stehen verschiedene Methoden zur
+                                Verfügung</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="services-wrap">
                             <img src="images/service-4.jpg" alt="" class="rounded-circle">
-                            <h3>Pedicure</h3>
-                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
-                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
-                                in. </p>
+                            <h3>Fußpflege</h3>
+                            <p>Pediküre ist eine großartige Möglichkeit, Ihre Füße zu verwöhnen,
+                                dass sie gesund aussehen und sich so anfühlen. Mit regelmäßiger Pediküre halten Sie
+                                Ihre Füße in Topform!</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="services-wrap">
                             <img src="images/service-5.jpg" alt="" class="rounded-circle">
-                            <h3>Manicure</h3>
-                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
-                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
-                                in. </p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="services-wrap">
-                            <img src="images/service-6.jpg" alt="" class="rounded-circle">
-                            <h3>Dazzling Makeup</h3>
-                            <p>Whether you are looking for a design refresh we are confident you will be pleased with
-                                the results. Integer sollicitudin vulputate lacus, congue vulputate nisl eleifend
-                                in. </p>
+                            <h3>Nageldesign</h3>
+                            <p>Sie wünschen längere Nägeln, ist die Modellage die beste Lösung.
+                                Die vorhandene Länge ist dabei unentscheidend.
+                                Eine Verlängerung ist bei jedem möglich. </p>
                         </div>
                     </div>
                 </div>
@@ -310,159 +140,7 @@
         </section>
 
         <!-- Gallery Start -->
-        <section id="gallery" class="home-pad">
-            <div class="main-heading">
-                Our Gallery
-                <span><i class="fa fa-leaf"></i></span>
-            </div>
-
-            <div id="js-filters-mosaic-flat" class="cbp-l-filters-buttonCenter">
-                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
-                    All
-                    <div class="cbp-filter-counter"></div>
-                </div>
-                <div data-filter=".print" class="cbp-filter-item">
-                    Massage
-                    <div class="cbp-filter-counter"></div>
-                </div>
-                <div data-filter=".web-design" class="cbp-filter-item">
-                    Hair Styling
-                    <div class="cbp-filter-counter"></div>
-                </div>
-                <div data-filter=".graphic" class="cbp-filter-item">
-                    Beauty
-                    <div class="cbp-filter-counter"></div>
-                </div>
-                <div data-filter=".motion" class="cbp-filter-item">
-                    Spa
-                    <div class="cbp-filter-counter"></div>
-                </div>
-            </div>
-
-            <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat wow fadeIn" data-wow-duration="0"
-                 data-wow-delay="0">
-                <div class="cbp-item web-design graphic">
-                    <a href="images/gallery/img-1.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/gallery/img-1.jpg" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Gallery Title</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item print motion">
-                    <a href="images/gallery/img-2.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/gallery/img-2.jpg" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Gallery Title</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item print motion">
-                    <a href="images/gallery/img-3.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/gallery/img-3.jpg" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Gallery Title</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item motion graphic">
-                    <a href="images/gallery/img-4.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/gallery/img-4.jpg" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Gallery Title</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item web-design print">
-                    <a href="images/gallery/img-5.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/gallery/img-5.jpg" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Gallery Title</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item print motion">
-                    <a href="images/gallery/img-6.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/gallery/img-6.jpg" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Gallery Title</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item web-design print">
-                    <a href="images/gallery/img-7.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/gallery/img-7.jpg" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Gallery Title</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cbp-item print graphic">
-                    <a href="images/gallery/img-8.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/gallery/img-8.jpg" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title">Gallery Title</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div id="js-loadMore-mosaic-flat" class="cbp-l-loadMore-bgbutton">
-                <a href="gallery/loadMore.html" class="cbp-l-loadMore-link" rel="nofollow">
-                    <span class="cbp-l-loadMore-defaultText">LOAD MORE</span>
-                    <span class="cbp-l-loadMore-loadingText">LOADING...</span>
-                    <span class="cbp-l-loadMore-noMoreLoading">No More Images</span>
-                </a>
-            </div>
-        </section>
+        {% include "snippets/gallery.html" %}
         <!-- Gallery End -->
 
         <!-- Hot Package Start -->
@@ -941,19 +619,7 @@
     </div>
     <!-- Main Bodycontent End -->
 
-    <section class="copyright home-pad">
-        <div class="container">
-            <div class="row text-md-left">
-                <div class="col-sm-12 col-md-4">
-                    <a href="http://mannatstudio.com/" target="_blank"> Well&amp;Spa</a> © 2017. All Rights Reserved.
-                </div>
-                <div class="col-sm-12 col-md-8 text-md-right">
-                    Landing Page Template Designed &amp; Developed By: <a href="http://mannatstudio.com/"
-                                                                          target="_blank">Mannat Studio</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include "snippets/copyright.html" %}
 
     <!--  Back To Top  -->
     <div id="back-top">
