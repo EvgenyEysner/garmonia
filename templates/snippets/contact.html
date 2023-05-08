@@ -66,17 +66,17 @@
                                                 <div id="sucessmessage"></div>
                                             </div>
                                         </div>
-                                        <form action="" method="post" id="contact_form" novalidate="novalidate"
+                                        <form action="" method="post" id="contact_form" name="contact" novalidate="novalidate"
                                               class="col-md-12">
                                             <input type="hidden" name="form_type" value="form-2"/>
                                             {% csrf_token %}
                                             <div class="form-row">
                                                 <div class="col">
-                                                    <input type="text" name="first_name" id="name"
+                                                    <input type="text" name="first_name" id="first_name"
                                                            class="form-control" placeholder="Vorname">
                                                 </div>
                                                 <div class="col">
-                                                    <input type="text" name="last_name" id="lastname"
+                                                    <input type="text" name="last_name" id="last_name"
                                                            class="form-control" placeholder="Nachname">
                                                 </div>
                                             </div>
@@ -93,7 +93,7 @@
                                             </div>
                                             <div class="form-row">
                                                 <div class="col">
-                                                            <textarea name="message" id="comment" class="form-control"
+                                                            <textarea name="message" id="message" class="form-control"
                                                                       rows="8" placeholder="Ihre Nachricht"></textarea>
                                                 </div>
                                             </div>

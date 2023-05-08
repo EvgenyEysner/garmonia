@@ -240,42 +240,44 @@ $(document).ready(function () {
     // Contact Form
     jQuery("#contact_form").validate({
         meta: "validate",
-        submitHandler: function (form) {
-
-            var s_name = $("#name").val();
-            var s_lastname = $("#lastname").val();
-            var s_email = $("#email").val();
-            var s_phone = $("#phone").val();
-            var s_suject = $("#subject").val();
-            var s_comment = $("#comment").val();
-            $.post("contact.php", {
-                    name: s_name,
-                    lastname: s_lastname,
-                    email: s_email,
-                    phone: s_phone,
-                    subject: s_suject,
-                    comment: s_comment
-                },
-                function (result) {
-                    $('#sucessmessage').append(result);
-                });
-            $('#contact_form').hide();
-            return false;
-        },
         /* */
         rules: {
             name: "required",
-
-            lastname: "required",
             // simple rule, converted to {required:true}
             email: { // compound rule
                 required: true,
                 email: true
             },
-            phone: {
+            package: {
                 required: true,
             },
-            comment: {
+            phone: {
+                required: true
+            }
+        },
+        messages: {
+            name: "Bitte geben Sie Ihr Name ein.",
+            email: {
+                required: "Bitte E-Mail eingeben",
+                email: "Bitte E-Mail eingeben"
+            },
+            phone: "Bitte geben Sie eine Rufnummer an.",
+        },
+    });
+
+    // Contact Form
+    jQuery("form[name='contact']").validate({
+        meta: "validate",
+        /* */
+        rules: {
+            first_name: "required",
+            last_name: "required",
+            // simple rule, converted to {required:true}
+            email: { // compound rule
+                required: true,
+                email: true
+            },
+            message: {
                 required: true
             },
             subject: {
@@ -283,15 +285,14 @@ $(document).ready(function () {
             }
         },
         messages: {
-            name: "Please enter your name.",
-            lastname: "Please enter your last name.",
+            first_name: "Bitte geben Sie Ihr Name ein.",
+            last_name: "Bitte geben Sie Ihr Vorname ein.",
             email: {
-                required: "Please enter email.",
-                email: "Please enter valid email"
+                required: "Bitte E-Mail eingeben",
+                email: "Bitte E-Mail eingeben"
             },
-            phone: "Please enter a phone.",
-            subject: "Please enter a subject.",
-            comment: "Please enter a comment."
+            subject: "Bitte geben Sie einen Betreff ein.",
+            message: "Bitte eine Nachricht eingeben"
         },
     });
 

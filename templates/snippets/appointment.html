@@ -17,15 +17,16 @@
                            placeholder="Name, Vorname">
                 </div>
                 <div class="form-row">
-                    <input type="text" name="email" id="email" class="form-control" placeholder="Email">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="form-row mb-3">
-                    <input type="text" name="phone" id="subject" class="form-control"
+                    <input type="tel" name="phone" id="phone" class="form-control"
                            placeholder="Telefon">
                 </div>
                 <div class="form-row">
-                    <select title="Behandlung auswählen"required
-                            class="custom-select mb-3" aria-required="true" aria-invalid="false" name="package">
+                    <select title="Behandlung auswählen"
+                            class="custom-select mb-3" aria-required="true" aria-invalid="false" name="package"
+                            id="package">
                         <option name="" value="">Behandlung auswählen</option>
                         {% for item in items %}
                             <option data-model-name="package" value="{{ item.name }}">{{ item.category }}
