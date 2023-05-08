@@ -1,0 +1,42 @@
+<div class="col-lg-5 col-sm-12">
+    <div class="header-appointment">
+        <div class="main-heading">
+            Termin vereinbaren<span><i class="fa fa-leaf"></i></span>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 smart-mar">
+                <div>
+                    <div id="sucessmessage"></div>
+                </div>
+            </div>
+            <form action="" method="post" id="contact_form" novalidate="novalidate" class="col">
+                {% csrf_token %}
+                <input type="hidden" name="form_type" value="form-1"/>
+                <div class="form-row">
+                    <input type="text" name="name" id="name" class="form-control"
+                           placeholder="Name, Vorname">
+                </div>
+                <div class="form-row">
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-row mb-3">
+                    <input type="text" name="phone" id="subject" class="form-control"
+                           placeholder="Telefon">
+                </div>
+                <div class="form-row">
+                    <select title="Behandlung auswählen"required
+                            class="custom-select mb-3" aria-required="true" aria-invalid="false" name="package">
+                        <option name="" value="">Behandlung auswählen</option>
+                        {% for item in items %}
+                            <option data-model-name="package" value="{{ item.name }}">{{ item.category }}
+                                | {{ item.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-row">
+                    <input type="submit" class="form-btn" value="Termin anfragen"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

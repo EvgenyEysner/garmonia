@@ -68,6 +68,7 @@
                                         </div>
                                         <form action="" method="post" id="contact_form" novalidate="novalidate"
                                               class="col-md-12">
+                                            <input type="hidden" name="form_type" value="form-2"/>
                                             {% csrf_token %}
                                             <div class="form-row">
                                                 <div class="col">
@@ -82,7 +83,7 @@
 
                                             <div class="form-row">
                                                 <div class="col">
-                                                    <input type="text" name="email" id="email"
+                                                    <input type="email" name="email" id="email"
                                                            class="form-control" placeholder="Email">
                                                 </div>
                                                 <div class="col">

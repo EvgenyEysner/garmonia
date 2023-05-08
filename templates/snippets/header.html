@@ -18,7 +18,8 @@
                                data-url="false" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
-                                                data-easing="easeOutQuint" data-url="false" href="#welcome-wrap">Das Angebot</a></li>
+                                                data-easing="easeOutQuint" data-url="false" href="#welcome-wrap">Das
+                            Angebot</a></li>
                         <li class="nav-item"><a class="nav-link" data-scroll data-speed="2000"
                                                 data-easing="easeOutQuint" data-url="false"
                                                 href="#services">Leistungen</a>
@@ -56,48 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-sm-12">
-                <div class="header-appointment">
-                    <div class="main-heading">
-                        Book An Appointment<span><i class="fa fa-leaf"></i></span>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 smart-mar">
-                            <div>
-                                <div id="sucessmessage"></div>
-                            </div>
-                        </div>
-                        <form action="#" method="post" id="contact_form" novalidate="novalidate" class="col">
-                            <div class="form-row">
-                                <input type="text" name="name" id="name" class="form-control"
-                                       placeholder="First Name">
-                            </div>
-                            <div class="form-row">
-                                <input type="text" name="email" id="email" class="form-control" placeholder="Email">
-                            </div>
-                            <div class="form-row mb-3">
-                                <input type="text" name="subject" id="subject" class="form-control"
-                                       placeholder="Phone">
-                            </div>
-                            <div class="form-row">
-                                <select title="Please choose a package" required="" name="package"
-                                        class="custom-select mb-3" aria-required="true" aria-invalid="false">
-                                    <option value="">Choose a pacakage</option>
-                                    <option value="Stone Massage">Stone Massage</option>
-                                    <option value="Luxury Facial">Luxury Facial</option>
-                                    <option value="Body Massage">Body Massage</option>
-                                    <option value="Pedicure">Pedicure</option>
-                                    <option value="Manicure">Manicure</option>
-                                    <option value="Dazzling Makeup">Dazzling Makeup</option>
-                                </select>
-                            </div>
-                            <div class="form-row">
-                                <button type="submit" class="form-btn">Book an Appointment</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            {% include "snippets/appointment.html" %}
         </div>
         <div class="clearfix"></div>
     </div>
