@@ -1,23 +1,24 @@
 from django.db import models
 
 
+class Category(models.Model):
+    name = models.CharField("Kategorie", max_length=128)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ["name"]
+        verbose_name = "Kategorie"
+        verbose_name_plural = "Kategorien"
+
+
 class Treatment(models.Model):
-    class CategoryChoices(models.IntegerChoices):
-        KOSMETIK = 1, "Kosmetische Behandlungen"
-        NAGELDESIGN = 2, "Nageldesign"
-        PERMANENT = 3, "Permanent Make Up"
-        ENTHAARUNG = 4, "Körperenthaarung"
-        FUSSPFLEGE = 5, "Fußpflege"
-
     name = models.CharField("Name", max_length=255)
-    category = models.PositiveSmallIntegerField(
-        choices=CategoryChoices.choices,
-        default=CategoryChoices.KOSMETIK,
-        verbose_name="Leistungen",
+    category = models.ForeignKey(
+        Category, verbose_name="Kategorie", on_delete=models.CASCADE
     )
-
     description = models.TextField("Beschreibung", null=True, blank=True)
-
     price = models.DecimalField("Preise", max_digits=10, decimal_places=2, null=True)
 
     class Meta:
@@ -50,5 +51,19 @@ class MonthlyOffer(models.Model):
         return self.title
 
 
-class Gallery(models.Model):
-    pass
+class Testimonial(models.Model):
+    first_name = models.CharField("Vorname", max_length=64)
+    last_name = models.CharField("Nachname", max_length=64)
+    text = models.TextField("Bewertung")
+
+    class Meta:
+        ordering = ("last_name",)
+        verbose_name = "Bewertung"
+        verbose_name_plural = "Bewertungen"
+
+    @property
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
+    def __str__(self):
+        return f"{self.last_name}, {self.first_name}"

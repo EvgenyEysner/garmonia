@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Treatment, MonthlyOffer
+from .models import Treatment, MonthlyOffer, Category, Testimonial
 
 
 @admin.register(Treatment)
@@ -17,3 +17,15 @@ class MonthlyOfferAdmin(admin.ModelAdmin):
     list_filter = ("title", "active")
     search_fields = ["title"]
     ordering = ["title"]
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ("name",)
+    ordering = ["name"]
+
+
+@admin.register(Testimonial)
+class TestimonialAdmin(admin.ModelAdmin):
+    list_display = ("first_name", "last_name", "text")
+    ordering = ["last_name"]

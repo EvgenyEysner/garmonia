@@ -4,30 +4,18 @@
             Preisliste
             <span><i class="fa fa-leaf"></i></span>
         </div>
-        <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-8 wow fadeInUp" data-wow-duration="0"
-                 data-wow-delay="0">
-                <table class="table table-hover">
-                    <thead>
-
-                    <tr>
-                        <th scope="col">Art der Behandlung</th>
-                        <th scope="col">Bezeichnung</th>
-                        <th scope="col">Beschreibung</th>
-                        <th scope="col">Preis</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+        <div class="row d-flex align-items-center justify-content-center flex-column">
+            <div class="col-8 wow fadeInUp" data-wow-duration="0" data-wow-delay="0">
+                <ul class="list-group list-group-flush">
                     {% for item in items %}
-                        <tr>
-                            <td>{{ item.get_category_display }}</td>
-                            <td>{{ item.name }}</td>
-                            <td>{{ item.description }}</td>
-                            <td>{{ item.price }}€</td>
-                        </tr>
+                        <li class="list-group-item">
+                            <h3>{{ item.category }}</h3>
+                            <h4>{{ item.name }}</h4>
+                            <p>{{ item.description }}</p>
+                            <h5>{{ item.price }} €</h5>
+                        </li>
                     {% endfor %}
-                    </tbody>
-                </table>
+                </ul>
             </div>
         </div>
     </div>

@@ -1,0 +1,116 @@
+{% load static %}
+<section id="contact" class="home-pad">
+    <div class="main-heading">
+        Kontakt
+        <span><i class="fa fa-leaf"></i></span>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3 col-sm-6 wow fadeInLeft" data-wow-duration="1" data-wow-delay="0">
+                <div class="contact-wrap">
+                    <div class="contact-icon rounded-circle">
+                        <i class="fa fa-map-signs"></i>
+                    </div>
+                    <h3>Adresse</h3>
+                    <div>Bahnhofsplatz 2a <br>26121 Oldenburg, 2 OG</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 col-sm-6 wow fadeInLeft" data-wow-duration="1" data-wow-delay="0.2s">
+                <div class="contact-wrap">
+                    <div class="contact-icon rounded-circle">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <h3>Telefon</h3>
+                    <div><a href="tel:+49179771648">+49179 7716648</a><br></div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 col-sm-6 wow fadeInLeft" data-wow-duration="1" data-wow-delay="0.4s">
+                <div class="contact-wrap">
+                    <div class="contact-icon rounded-circle">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <div><a href="mailto:garmonia.eisner@gmail.com">garmonia.eisner@gmail.com</a><br></div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 col-sm-6 wow fadeInLeft" data-wow-duration="1" data-wow-delay="0.6s">
+                <div class="contact-wrap">
+                    <div class="contact-icon rounded-circle">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <h3>Öffnungszeiten</h3>
+                    <div>von 10:00 bis 18:00 Mo. - Fr.<br>Und nach Vereinbarung</div>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <section class="hs-recent-posts">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-5 left-content">
+                                <div class="bg-left">
+                                    <div>
+                                        <div>
+                                            <a href="https://www.google.com/maps/place/Staatl.gepr%C3%BCfte+Kosmetikerin+Olga+Eisner/@53.1428857,8.2229398,17.21z/data=!3m1!5s0x47b6df04c261e141:0xd822d4a9602c713b!4m6!3m5!1s0x47b6df05d4591ca3:0x146720c17a316191!8m2!3d53.1428031!4d8.2226412!16s%2Fg%2F1w6r7bpr?hl=de&authuser=0"><img
+                                                    src="{% static "images/karte.png" %}"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-7 right-content">
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="row hs-content">
+                                        <div class="col-sm-12 smart-mar">
+                                            <div>
+                                                <div id="sucessmessage"></div>
+                                            </div>
+                                        </div>
+                                        <form action="" method="post" id="contact_form" novalidate="novalidate"
+                                              class="col-md-12">
+                                            {% csrf_token %}
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <input type="text" name="first_name" id="name"
+                                                           class="form-control" placeholder="Vorname">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" name="last_name" id="lastname"
+                                                           class="form-control" placeholder="Nachname">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <input type="text" name="email" id="email"
+                                                           class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" name="subject" id="subject"
+                                                           class="form-control" placeholder="Betreff">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                            <textarea name="message" id="comment" class="form-control"
+                                                                      rows="8" placeholder="Ihre Nachricht"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <input type="submit" class="form-btn" value="Senden"/>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / .row -->
+                    </div>
+                    <!-- /.container -->
+                </section>
+            </div>
+        </div>
+    </div>
+</section>

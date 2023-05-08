@@ -1,3 +1,4 @@
+{% load static %}
 <section id="gallery" class="home-pad">
     <div class="main-heading">
         Our Gallery
@@ -9,7 +10,7 @@
             All
             <div class="cbp-filter-counter"></div>
         </div>
-        <div data-filter=".print" class="cbp-filter-item">
+        <div data-filter=".kosmetik" class="cbp-filter-item">
             Kosmetische Behandlungen
             <div class="cbp-filter-counter"></div>
         </div>
@@ -30,9 +31,9 @@
     <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat wow fadeIn" data-wow-duration="0"
          data-wow-delay="0">
         <div class="cbp-item web-design graphic">
-            <a href="images/gallery/img-1.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+            <a href="{% static 'images/gallery/img-1.png' %}" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
                 <div class="cbp-caption-defaultWrap">
-                    <img src="images/gallery/img-1.jpg" alt="">
+                    <img src="{% static 'images/gallery/img-1.png' %}" alt="">
                 </div>
                 <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignCenter">
@@ -43,10 +44,10 @@
                 </div>
             </a>
         </div>
-        <div class="cbp-item print motion">
-            <a href="images/gallery/img-2.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+        <div class="cbp-item kosmetik motion">
+            <a href="{% static 'images/gallery/img-2.png' %}" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
                 <div class="cbp-caption-defaultWrap">
-                    <img src="images/gallery/img-2.jpg" alt="">
+                    <img src="{% static 'images/gallery/img-2.png' %}" alt="">
                 </div>
                 <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignCenter">
@@ -57,10 +58,10 @@
                 </div>
             </a>
         </div>
-        <div class="cbp-item print motion">
-            <a href="images/gallery/img-3.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+        <div class="cbp-item kosmetik motion">
+            <a href="{% static 'images/gallery/img-3.png'%}" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
                 <div class="cbp-caption-defaultWrap">
-                    <img src="images/gallery/img-3.jpg" alt="">
+                    <img src="{% static 'images/gallery/img-3.png'%}" alt="">
                 </div>
                 <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignCenter">
@@ -72,9 +73,9 @@
             </a>
         </div>
         <div class="cbp-item motion graphic">
-            <a href="images/gallery/img-4.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+            <a href="{% static 'images/gallery/img-4.png'%}" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
                 <div class="cbp-caption-defaultWrap">
-                    <img src="images/gallery/img-4.jpg" alt="">
+                    <img src="{% static 'images/gallery/img-4.png'%}" alt="">
                 </div>
                 <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignCenter">
@@ -85,10 +86,10 @@
                 </div>
             </a>
         </div>
-        <div class="cbp-item web-design print">
-            <a href="images/gallery/img-5.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+        <div class="cbp-item web-design kosmetik">
+            <a href="{% static 'images/gallery/img-5.png'%}" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
                 <div class="cbp-caption-defaultWrap">
-                    <img src="images/gallery/img-5.jpg" alt="">
+                    <img src="{% static 'images/gallery/img-5.png'%}" alt="">
                 </div>
                 <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignCenter">
@@ -99,10 +100,10 @@
                 </div>
             </a>
         </div>
-        <div class="cbp-item print motion">
-            <a href="images/gallery/img-6.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+        <div class="cbp-item kosmetik motion">
+            <a href="{% static 'images/gallery/img-6.png'%}" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
                 <div class="cbp-caption-defaultWrap">
-                    <img src="images/gallery/img-6.jpg" alt="">
+                    <img src="{% static 'images/gallery/img-6.png'%}" alt="">
                 </div>
                 <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignCenter">
@@ -113,10 +114,10 @@
                 </div>
             </a>
         </div>
-        <div class="cbp-item web-design print">
-            <a href="images/gallery/img-7.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+        <div class="cbp-item web-design kosmetik">
+            <a href="{% static 'images/gallery/img-7.png'%}" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
                 <div class="cbp-caption-defaultWrap">
-                    <img src="images/gallery/img-7.jpg" alt="">
+                    <img src="{% static 'images/gallery/img-7.png'%}" alt="">
                 </div>
                 <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignCenter">
@@ -127,10 +128,10 @@
                 </div>
             </a>
         </div>
-        <div class="cbp-item print graphic">
-            <a href="images/gallery/img-8.jpg" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
+        <div class="cbp-item kosmetik graphic">
+            <a href="{% static 'images/gallery/img-8.png'%}" class="cbp-caption cbp-lightbox" data-title="Gallery Title">
                 <div class="cbp-caption-defaultWrap">
-                    <img src="images/gallery/img-8.jpg" alt="">
+                    <img src="{% static 'images/gallery/img-8.png'%}" alt="">
                 </div>
                 <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignCenter">
