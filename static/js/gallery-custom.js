@@ -1,42 +1,46 @@
-(function($, window, document, undefined) {
-    'use strict';
+function scaleGallery() {
+    // This is roughly the max pixels width/height of a square photo
+    var widthSetting = 400;
 
-    // init cubeportfolio
-    $('#js-grid-mosaic-flat').cubeportfolio({
-        filters: '#js-filters-mosaic-flat',
-        loadMore: '#js-loadMore-mosaic-flat',
-        loadMoreAction: 'click',
-        layoutMode: 'mosaic',
-        sortToPreventGaps: true,
-        mediaQueries: [{
-            width: 1500,
-            cols: 6
-        }, {
-            width: 1100,
-            cols: 4
-        }, {
-            width: 800,
-            cols: 3
-        }, {
-            width: 480,
-            cols: 2
-        }, {
-            width: 320,
-            cols: 1
-        }],
-        defaultFilter: '*',
-        animationType: 'fadeOutTop',
-        gapHorizontal: 0,
-        gapVertical: 0,
-        gridAdjustment: 'responsive',
-        caption: 'fadeIn',
-        displayType: 'fadeIn',
-        displayTypeSpeed: 100,
+    // Do not edit any of this unless you know what you're doing
+    var containerWidth = $(".gallery").width();
+    var ratioSumMax = containerWidth / widthSetting;
+    var imgs = $(".gallery img");
+    var numPhotos = imgs.length, ratioSum, ratio, photo, row, rowPadding, i = 0;
 
-        // lightbox
-        lightboxDelegate: '.cbp-lightbox',
-        lightboxGallery: true,
-        lightboxTitleSrc: 'data-title',
-        lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
-    });
-})(jQuery, window, document);
+    while (i < numPhotos) {
+        ratioSum = rowPadding = 0;
+        row = new Array();
+        while (i < numPhotos && ratioSum < ratioSumMax) {
+            photo = $(imgs[i]);
+            // reset width to original
+            photo.width("");
+            ratio = photo.width() / photo.height();
+            rowPadding += getHorizontalPadding(photo);
+            // if this is going to be first in the row, clear: left
+            if (ratioSum == 0) photo.css("clear", "left"); else photo.css("clear", "none");
+            ratioSum += ratio;
+            row.push(photo);
+            i++;
+            // if only 1 image left, squeeze it in
+            if (i == numPhotos - 1) ratioSumMax = 999;
+        }
+        unitWidth = (containerWidth - rowPadding) / ratioSum;
+
+        row.forEach(function (elem) {
+            elem.width(unitWidth * elem.width() / elem.height());
+        });
+    }
+}
+
+function getHorizontalPadding(elem) {
+    var padding = 0;
+    var left = elem.css("padding-left");
+    var right = elem.css("padding-right");
+    padding += parseInt(left ? left.replace("px", "") : 0);
+    padding += parseInt(right ? right.replace("px", "") : 0);
+    return padding;
+}
+
+$(window).load(scaleGallery);
+$(window).resize(scaleGallery);
