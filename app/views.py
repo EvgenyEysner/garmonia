@@ -8,7 +8,7 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 
 from .forms import EmailPostForm, AppointmentForm
-from .models import Treatment, MonthlyOffer, Testimonial
+from .models import Treatment, MonthlyOffer, Testimonial, GalleryImage
 
 
 class IndexView(TemplateView):
@@ -24,8 +24,11 @@ class IndexView(TemplateView):
         treatments = list(Treatment.objects.all())
         # get random Testimonials
         testimonials = list(Testimonial.objects.all())
+        # get random image for Gallery
+        images = list(GalleryImage.objects.all())
         context["selling"] = random.sample(treatments, 6)
         context["testimonials"] = random.sample(testimonials, 3)
+        context["photos"] = random.sample(images, 10)
         return context
 
     def post(self, request, *args, **kwargs):

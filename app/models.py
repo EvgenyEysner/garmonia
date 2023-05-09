@@ -67,3 +67,12 @@ class Testimonial(models.Model):
 
     def __str__(self):
         return f"{self.last_name}, {self.first_name}"
+
+
+class GalleryImage(models.Model):
+    image = models.ImageField(verbose_name="Galeriebild", upload_to="gallery")
+    description = models.CharField("Kurzbeschreibung", max_length=28)
+
+    class Meta:
+        verbose_name = "Bild"
+        verbose_name_plural = "Bilder"

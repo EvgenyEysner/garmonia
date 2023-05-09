@@ -1,20 +1,13 @@
 <section id="gallery" class="home-pad">
     <div class="main-heading">
-        Our Gallery
+        Bildergalerie
         <span><i class="fa fa-leaf"></i></span>
     </div>
     <div class="gallery container-lg">
         <div class="row ml-0 align-items-center">
-            <img src="https://31.media.tumblr.com/tumblr_loumsfBCuE1qeo682o1_500.jpg">
-            <img src="https://24.media.tumblr.com/tumblr_m1yru9PNMV1qeo682o1_500.jpg">
-            <img src="https://24.media.tumblr.com/tumblr_m24ic6kY6Q1qeo682o1_500.jpg">
-            <img src="https://31.media.tumblr.com/tumblr_lriz0lDN2y1qeo682o1_500.jpg">
-            <img src="https://24.media.tumblr.com/tumblr_lrmgjaL62O1qeo682o1_500.jpg">
-            <img src="https://24.media.tumblr.com/tumblr_lqtwuiEf8j1qeo682o1_r1_500.jpg">
-            <img src="https://31.media.tumblr.com/tumblr_lqsdws3ihB1qeo682o1_500.jpg">
-            <img src="https://31.media.tumblr.com/tumblr_lqscbwxUt51qeo682o1_500.jpg">
-            <img src="https://31.media.tumblr.com/tumblr_lq6hl0PhyN1qeo682o1_500.jpg">
-            <img src="https://24.media.tumblr.com/tumblr_lo6iddvEi51qeo682o1_500.jpg">
+            {% for photo in photos %}
+                <img src="{{ photo.image.url }}" alt="{{ photo.description }}">
+            {% endfor %}
         </div>
     </div>
 </section>
