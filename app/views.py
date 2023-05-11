@@ -53,7 +53,7 @@ class IndexView(TemplateView):
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.RECIPIENT_ADDRESS],
                 )
-                return HttpResponseRedirect("")
+                return HttpResponseRedirect("home")
         else:
             form = AppointmentForm()
 
@@ -77,7 +77,7 @@ class IndexView(TemplateView):
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.RECIPIENT_ADDRESS],
                 )
-                return HttpResponseRedirect("")
+                return HttpResponseRedirect("home")
             else:
                 form = EmailPostForm()
         return render(request, self.template_name, {"form": form})
