@@ -19,7 +19,7 @@ environ.Env.read_env()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG")
 
-ALLOWED_HOSTS = ["schoenheitsecke-oldenburg.de"]
+ALLOWED_HOSTS = ["schoenheitsecke-oldenburg.de", "http://202.61.236.109/"]
 
 
 # Application definition
