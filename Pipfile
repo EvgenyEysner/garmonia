@@ -10,6 +10,9 @@ black = "*"
 flake8 = "*"
 pillow = "==9.5.0"
 gunicorn = "==20.0.4"
+django-csp = "==3.7"             # Security middleware for telling the browser not to load stuff from other websites
+django-db-logger = "==0.1.12"    # Database logging
+django-querycount = "==0.7.0"    # Simple performance monitoring middleware
 
 [dev-packages]
 
